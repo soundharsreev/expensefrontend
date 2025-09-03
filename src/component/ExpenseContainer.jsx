@@ -21,6 +21,9 @@ function ExpenseContainer(){
        });
         const data = await response.json();
          console.log(data) 
+
+        setexpense([...expense, data.expense]);
+        
         }catch (error) 
         {
            console.error("Error creating expense:", error);
