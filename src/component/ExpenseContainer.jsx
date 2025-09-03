@@ -10,7 +10,7 @@ import Balancecontainer from './Balancecontainer'
 function ExpenseContainer(){
       const EXPENSE=[]
 
- const[expense, setexpense]=useState([EXPENSE])
+ const[expense, setexpense]=useState([])
  async function addexpense(title, amount) {
   try
    { 
@@ -23,7 +23,7 @@ function ExpenseContainer(){
          console.log(data) 
 
         setexpense([...expense, data.expense]);
-        
+
         }catch (error) 
         {
            console.error("Error creating expense:", error);
